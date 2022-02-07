@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signin.css">
+  <title>Sign In</title>
+</head>
+
+<body>
+  <form id="login" name="myform"  method="post" onsubmit="login()" >
+  
+  <div class='wrapper'>
+
+    <h1 id="heading">Sign In</h1>
+
+    <div class='text-field'>
+      <input type='text' id="email" name='email' placeholder="Email" />
+      <span></span>
+
+      <input type='password' id="password" name='password' placeholder="Password" />
+    </div>
+
+    <div class="links" id="fpass"><a href='#'>Forgot Password?</a></div>
+
+    <button type='submit' value="submit" onclick="validateemail();">Sign In</button>
+
+    <div class='links'>
+      <span>
+        Don't have an account? <a href="/sign-up">Sign Up</a>
+      </span>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+  import { } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-auth.js"
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD1OxT9Y6UtG_Hv1m62zIBmk5oLhrRimn0",
+    authDomain: "sign-in-810v.firebaseapp.com",
+    projectId: "sign-in-810v",
+    storageBucket: "sign-in-810v.appspot.com",
+    messagingSenderId: "375066974827",
+    appId: "1:375066974827:web:fa5706134bd477d9e32f2e",
+    measurementId: "G-RE1KKPE3XP"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+
+</script>
+<script src="signin.js"></script>
